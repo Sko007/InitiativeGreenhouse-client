@@ -19,4 +19,4 @@ class CalculationContainer extends Component {
 
 export default connect(
     mapStateToProps,
-)(CalculationContainer);
+)(CalculationContainer);    

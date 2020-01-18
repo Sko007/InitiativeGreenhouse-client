@@ -1,14 +1,10 @@
-import { USER_ID } from "../Actions/answer";
+import { ERROR_CO2FORM } from "../Actions/error";
 
 export default function(state = null, action) {
-  console.log("reducer for the user", action.payload);
   switch (action.type) {
-    case USER_ID:
+    case ERROR_CO2FORM:
       return action.payload;
-
     default:
       return state;
   }
 }
-
-
