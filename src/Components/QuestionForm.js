@@ -19,10 +19,10 @@ import "../Css/QuestionForm.css";
 class QuestionForm extends Component {
   state = {
     name: "",
-    answer: "",
-    answer1: "",
-    answer2: "",
-    answer3: ""
+    kwh: "",
+    meat: "",
+    water: "",
+    gasoline: ""
   };
 
   componentDidMount() {
@@ -65,7 +65,7 @@ class QuestionForm extends Component {
                 size="small"
                 style={{ color: "black" }}
                 onClick={() => {
-                  this.setState({ answer: Math.floor(this.props.averageKwh) });
+                  this.setState({ kwh: Math.floor(this.props.averageKwh) });
                 }}
               >
                 Electricity in Kwh-Average
@@ -75,7 +75,7 @@ class QuestionForm extends Component {
                 size="small"
                 onClick={() => {
                   this.setState({
-                    answer1: Math.floor(this.props.averageMeat)
+                    meat: Math.floor(this.props.averageMeat)
                   });
                 }}
               >
@@ -85,7 +85,7 @@ class QuestionForm extends Component {
                 size="small"
                 onClick={() => {
                   this.setState({
-                    answer2: Math.floor(this.props.averageWater)
+                    water: Math.floor(this.props.averageWater)
                   });
                 }}
               >
@@ -95,7 +95,7 @@ class QuestionForm extends Component {
                 size="small"
                 onClick={() => {
                   this.setState({
-                    answer3: Math.floor(this.props.averageGasoline)
+                    gasoline: Math.floor(this.props.averageGasoline)
                   });
                 }}
               >
@@ -126,10 +126,10 @@ class QuestionForm extends Component {
               <TextField
                 style={{ borderBottom: "1px solid black" }}
                 variant="outlined"
-                name="answer"
+                name="kwh"
                 label="Electricity/Month in KwH"
                 type="text"
-                value={this.state.answer}
+                value={this.state.kwh}
                 onChange={this.handleChange}
               ></TextField>
               <br />
@@ -138,11 +138,11 @@ class QuestionForm extends Component {
               <TextField
                 style={{ borderBottom: "1px solid black" }}
                 variant="outlined"
-                name="answer1"
+                name="meat"
                 label="Meat/Month in KG"
                 type="text"
                 onChange={this.handleChange}
-                value={this.state.answer1}
+                value={this.state.meat}
               ></TextField>
               <br />
 
@@ -151,10 +151,10 @@ class QuestionForm extends Component {
               <TextField
                 style={{ borderBottom: "1px solid black" }}
                 variant="outlined"
-                name="answer2"
+                name="water"
                 label="Water/Month in L"
                 type="text"
-                value={this.state.answer2}
+                value={this.state.water}
                 onChange={this.handleChange}
               ></TextField>
               <br />
@@ -163,10 +163,10 @@ class QuestionForm extends Component {
               <TextField
                 style={{ borderBottom: "1px solid black", color: "black" }}
                 variant="outlined"
-                name="answer3"
+                name="gasoline"
                 label="Gasoline/Month in L"
                 type="text"
-                value={this.state.answer3}
+                value={this.state.gasoline}
                 onChange={this.handleChange}
               ></TextField>
 
@@ -181,7 +181,6 @@ class QuestionForm extends Component {
                 Send
               </Button>
 
-              <button>check your comsumption</button>
             </form>
             {this.props.error && <Snackbar error={this.props.error} />}
           </div>

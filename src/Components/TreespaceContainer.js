@@ -37,7 +37,7 @@ onChange = (event, name) => {
             right="0.5%"
             zIndex="modal"
           >
-              <Treespace />
+              <Treespace 
                 handleSubmit ={this.submitForm}
                 onChange={this.onChange}
                 FullName={this.state.FullName}

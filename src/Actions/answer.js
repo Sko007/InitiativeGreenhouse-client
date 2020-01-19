@@ -7,7 +7,7 @@ export const postAnswers = answers => (dispatch, getState) => {
 
 
   superagent
-    .post(`${url}/answer`)
+    .post(`${url}/createAnswer`)
     .send(answers)
     .then(response => {
       const responseObj = { ...response.body, status };
