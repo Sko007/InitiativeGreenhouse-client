@@ -1,13 +1,10 @@
 import superagent from "superagent";
 
-const url = "http://localhost:4000";
+// const url = "http://localhost:4000";
+const url = "https://initiativegreenhouse.herokuapp.com";
 
 export const createTreeSpace = treeData => (dispatch, getState) => {
-  console.log("check what I can send to backend", treeData);
-  //name of variables in treedata
-  //fullName
-  //Contact
-  //AreasForTrees
+
 
   superagent
     .post(`${url}/createTreeSpace`)
