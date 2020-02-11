@@ -2,7 +2,7 @@ import superagent from "superagent";
 
 const url = "http://localhost:4000";
 
-export const treeSpaceFrom = treeData => (dispatch, getState) => {
+export const createTreeSpace = treeData => (dispatch, getState) => {
   console.log("check what I can send to backend", treeData);
   //name of variables in treedata
   //fullName
@@ -10,7 +10,7 @@ export const treeSpaceFrom = treeData => (dispatch, getState) => {
   //AreasForTrees
 
   superagent
-    .post(`${url}/createtreeSpace`)
+    .post(`${url}/createTreeSpace`)
     .send(treeData)
     .then(response => {
       console.log("check the response for submit treespaces", response);

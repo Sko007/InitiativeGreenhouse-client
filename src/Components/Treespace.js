@@ -9,10 +9,8 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 
-
 export default function FormDialog(props) {
   const [open, setOpen] = React.useState(false);
-
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -111,7 +109,9 @@ export default function FormDialog(props) {
                   width: "50vh"
                 }}
               >
-                <h1 style={{color:"black"}}>Your Submission was successful</h1>
+                <h1 style={{ color: "black" }}>
+                  Your Submission was successful
+                </h1>
               </Typography>
             </Container>
           </DialogContent>

@@ -10,7 +10,7 @@ import {averageKwh, averageWater, averageMeat, averageGasoline} from "./averager
 
 export default combineReducers({
   user: user,
-  calculation1:calculation,
+  calculation:calculation,
   payment: payment,
   treespace:treespace,
   treespace1: treespace1,

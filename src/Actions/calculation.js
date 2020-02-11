@@ -1,7 +1,7 @@
 import superagent from "superagent"
 const url = "http://localhost:4000";
 
-export const calculation = userId => (dispatch, getState) => {
+export const treeCalculation = userId => (dispatch, getState) => {
     console.log("id", userId);
     superagent
       .get(`${url}/calculation/${userId}`)

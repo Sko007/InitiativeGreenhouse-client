@@ -1,10 +1,9 @@
 import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import QuestionForm from "../QuestionForm"
+import QuestionForm from "../QuestionForm";
 import { makeStyles } from "@material-ui/core/styles";
-import Logo from "../../Css/statics/treelogo.jpeg"
-
+import Logo from "../../Css/statics/treelogo.jpeg";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -16,8 +15,7 @@ const useStyles = makeStyles(theme => ({
   menuButton: {
     marginRight: theme.spacing(0)
   },
-  title: {
-      }
+  title: {}
 }));
 
 export default function ElevateAppBar(props) {

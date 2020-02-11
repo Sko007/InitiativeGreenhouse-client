@@ -19,11 +19,11 @@ export const postAnswers = answers => (dispatch, getState) => {
       });
     })
     .catch(error => {
-      console.log("error from answer route", error.response.body.error);
       if (error.status === 400) {
+        console.log("check if error gets dispatched", error.response.body)
         dispatch({
           type: ERROR_CO2FORM,
-          payload: error.response.body.error || "Unknown error"
+          payload: error.response.body || "Unknown error"
         });
       } else {
         console.error(error);
@@ -31,19 +31,6 @@ export const postAnswers = answers => (dispatch, getState) => {
     });
 };
 
-export const calculation = userId => (dispatch, getState) => {
-  console.log("id", userId);
-  superagent
-    .get(`${url}/calculation/${userId}`)
-    .then(response => {
-      console.log("response from calculation Answers", response);
-      dispatch({
-        type: CALCULATION,
-        payload: JSON.parse(response.text)
-      });
-    })
-    .catch(error => console.log(error));
-};
 
 export const clearError = () => (dispatch, getState) => {
   dispatch({
